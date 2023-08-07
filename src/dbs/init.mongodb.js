@@ -1,5 +1,3 @@
-
-
 const mongoose = require('mongoose')
 
 mongoose.set('strictQuery', true)
@@ -10,10 +8,10 @@ mongoose.set('strictQuery', true)
 
 //nd6K6idrswJYN4cd
 // const connectString = `mongodb://${host}:${port}/${name}`
-const connectString = 'mongodb+srv://quyquy:QyHalVDd06UVkrt1@cluster0.waezzqe.mongodb.net/?retryWrites=true&w=majority'
-// w1GzFcrU99975hDQ
+const connectString = 'mongodb+srv://quyquy:QyHalVDd06UVkrt1@cluster0.xv8sxci.mongodb.net'
 
 
+console.log('connectString::', connectString)
 
 const { countConnect } = require('../helpers/check.connect')
 
