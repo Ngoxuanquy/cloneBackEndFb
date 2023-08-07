@@ -5,7 +5,6 @@ const { CREATED, SuccessResponse, } = require('../core/success.response')
 class NofiticatiionController {
 
     addNofiticatiion = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await NofiticatiionService.addNofiticatiion(req.body),
@@ -19,8 +18,6 @@ class NofiticatiionController {
     }
 
     postHaha = async (req, res, next) => {
-
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await PostService.postHaha(req.body),
@@ -28,7 +25,6 @@ class NofiticatiionController {
     }
 
     getAllById = async (req, res, next) => {
-        console.log(req.query)
         new SuccessResponse({
             metadata: await PostService.getAllById(req.query),
         }).send(res)

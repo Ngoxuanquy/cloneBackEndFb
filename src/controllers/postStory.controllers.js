@@ -6,7 +6,6 @@ class groupMessController {
 
 
     getStory = async (req, res, next) => {
-        console.log(req.params)
         new SuccessResponse({
             metadata: await postStoryService.getStory(req.params),
         }).send(res)

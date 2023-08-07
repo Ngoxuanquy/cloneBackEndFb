@@ -21,7 +21,6 @@ class PostService {
 
     static createPost = async (payload) => {
 
-        console.log(payload)
         try {
             const newPost = postModel.create({
                 user_id: payload.user_id,
@@ -95,11 +94,9 @@ class PostService {
 
     static getPostById = async ({ post_id }) => {
         try {
-            console.log({ post_id })
             const filter = { _id: post_id };
             const result = await postModel.find(filter);
 
-            console.log({ result })
             return result;
 
         } catch (error) {
@@ -141,7 +138,6 @@ class PostService {
             // Hàm tìm kiếm phần tử dựa trên tiêu chí cho trước
             const index = checkPost.feeling.findIndex(item => item.user_id === user_id);
 
-            console.log({ index })
 
             if (index === -1) {
                 // Phần tử không tồn tại, thêm mới vào mảng

@@ -2,7 +2,7 @@
 
 POST {{url_dev}}/shop/signup
 Content-Type: application/json 
-x-api-key: 5137d0d041f6f4928876647f6b5ea4d6d6630cd51920ce576c36b9e9ee76144617811bc4e9575570a42eb6f5a68953ed4523e4df29d322fb18cb7a2bf51cfb46
+x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5eed575ec5ca07b83b92c80b834de0b1db41017c161548fd91f3f4c2e3dab
 
 {
     "name": "abc",
@@ -12,7 +12,7 @@ x-api-key: 5137d0d041f6f4928876647f6b5ea4d6d6630cd51920ce576c36b9e9ee76144617811
 ###
 POST {{url_dev}}/shop/login
 Content-Type: application/json 
-x-api-key: 5137d0d041f6f4928876647f6b5ea4d6d6630cd51920ce576c36b9e9ee76144617811bc4e9575570a42eb6f5a68953ed4523e4df29d322fb18cb7a2bf51cfb46
+x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5eed575ec5ca07b83b92c80b834de0b1db41017c161548fd91f3f4c2e3dab
 
 {
     "email": "121",
@@ -151,9 +151,9 @@ authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM0NzFiYWU0
 ###
 POST {{url_dev}}/user/getFullUser
 Content-Type: application/json 
-x-api-key: 5137d0d041f6f4928876647f6b5ea4d6d6630cd51920ce576c36b9e9ee76144617811bc4e9575570a42eb6f5a68953ed4523e4df29d322fb18cb7a2bf51cfb46
-x-client-id: 64c471bae4f431c913319fae
-authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGM0NzFiYWU0ZjQzMWM5MTMzMTlmYWUiLCJlbWFpbCI6IjEyMSIsImlhdCI6MTY5MDg2MDk4MywiZXhwIjoxNjkxMDMzNzgzfQ.DvgnZp7Bg9u3gNNjjcZfEn0UP8m1u9a9cnnZVlqdzWQ
+x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5eed575ec5ca07b83b92c80b834de0b1db41017c161548fd91f3f4c2e3dab
+x-client-id: 64cf6d35462498db0cb5251f
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NGNmNmQzNTQ2MjQ5OGRiMGNiNTI1MWYiLCJlbWFpbCI6IjEyMSIsImlhdCI6MTY5MTMxNjQxNCwiZXhwIjoxNjkxNDg5MjE0fQ.0nrw-KpicI5UjwJHOupn9akFvlJSbT7XUiE_8xkckO8
 
 
 

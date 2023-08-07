@@ -21,7 +21,6 @@ class NofiticatiionService {
 
     static addNofiticatiion = async (payload) => {
 
-        console.log(payload)
 
         try {
             const newPost = NofiticatiionModel.create({

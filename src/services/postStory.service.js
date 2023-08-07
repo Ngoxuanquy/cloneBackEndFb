@@ -23,7 +23,6 @@ class PostService {
     static addStory = async (payload) => {
 
         try {
-            console.log({ payload })
 
             const filter = { user_id: payload.user_id };
             const update = {
@@ -57,7 +56,6 @@ class PostService {
 
             const checkGroup = await postStory.find({});
 
-            console.log({ checkGroup })
 
             // const result = groupMess.find({})
             return checkGroup

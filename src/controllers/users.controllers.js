@@ -6,28 +6,25 @@ class AccessController {
 
 
     getUserName = async (req, res, next) => {
-        console.log(req.params)
         new SuccessResponse({
             metadata: await UsersPostService.getUserNames(req.params),
         }).send(res)
     }
 
     getNameById = async (req, res, next) => {
-        console.log(req.params)
         new SuccessResponse({
             metadata: await UsersPostService.getNameById(req.params),
         }).send(res)
     }
 
     getFullUser = async (req, res, next) => {
-        console.log(req.params)
+        console.log("abc")
         new SuccessResponse({
             metadata: await UsersPostService.getFullUser(req.params),
         }).send(res)
     }
 
     addFriend = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await UsersPostService.addFriend(req.body),
@@ -35,7 +32,6 @@ class AccessController {
     }
 
     deleteFriend = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await UsersPostService.deleteFriend(req.body),
@@ -43,7 +39,6 @@ class AccessController {
     }
 
     addGroup = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await UsersPostService.addGroup(req.body),
@@ -51,7 +46,6 @@ class AccessController {
     }
 
     addImg = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await UsersPostService.addImg(req.body),

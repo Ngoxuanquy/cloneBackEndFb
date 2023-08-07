@@ -57,20 +57,28 @@ class PostService {
         }
     }
 
-    static getFullUser = async ({ keyId }) => {
+    static getFullUser = async () => {
         try {
-            const result = shopModels.find({})
-            return result
+            const result = await shopModels.find({});
 
+            if (!result || result.length === 0) {
+                // Respond with a 404 Not Found status if no data found
+                return res.status(404).json({ error: 'No data found' });
+            }
+
+            console.log(result);
+            // Respond with the retrieved data
+            return result
         } catch (error) {
-            throw error
+            console.error('Error:', error);
+            // Respond with a 500 Internal Server Error status if an error occurs
         }
-    }
+    };
+
 
     static addImg = async (payload) => {
 
         try {
-            console.log({ payload })
 
             const filter = { _id: payload.user_id };
             const update = {

@@ -21,8 +21,6 @@ class AccessService {
     static handleRefreshTokenV2 = async ({ user, refreshToken, keyStore }) => {
         const { userId, email } = user
 
-        console.log({ keyStore })
-
         if (keyStore.refreshTokensUsed.includes(refreshToken)) {
             await KeyTokenService.deleteKeyById(userId)
             throw new ForbiddenError('Something wrong happend !! Pls relogin')
@@ -114,11 +112,9 @@ class AccessService {
                 throw BadRequestError('Invalid Email or Password')
             }
 
-            console.log({ foundShop })
 
             // check passowrd and generate token
             const match = await bcrypt.compare(password, foundShop.password)
-            console.log({ match })
 
 
             if (!match) throw new AuthFailureError('Authentication error')
@@ -129,7 +125,6 @@ class AccessService {
 
             const tokens = await createTokenPair({ userId: foundShop._id, email }, publicKey, privateKey)
 
-            console.log({ foundShop })
 
             await KeyTokenService.createKeyToken({
                 userId: foundShop._id,

@@ -23,14 +23,16 @@ class PostService {
     static addGroup = async ({ payload }) => {
 
         try {
-            console.log(payload)
 
             const ids = payload.map(user => user._id);
 
             const newPost = groupMess.create({
                 array_user: payload,
-                array_Id: ids
+                array_Id: ids,
+                name: payload[2].nameGroup
             })
+
+            console.log(newPost)
             return newPost;
 
         } catch (error) {

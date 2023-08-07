@@ -25,15 +25,10 @@ io.on("connection", (socket) => {
         onlineUsers.set(userId, socket.id);
     });
 
-    console.log({ socket })
 
     socket.on("sendNotification", ({ senderName, receiverName, type, toID, toName }) => {
 
         const receiverSocketId = onlineUsers.get(toID);
-
-        console.log({ receiverSocketId });
-        console.log({ toID });
-
 
         if (receiverSocketId) {
             const test = io.to(receiverSocketId).emit("getNotification", {
@@ -42,8 +37,6 @@ io.on("connection", (socket) => {
                 toName,
                 toID
             });
-
-            console.log({ test })
 
         } else {
             console.log("Receiver not online or not found.");

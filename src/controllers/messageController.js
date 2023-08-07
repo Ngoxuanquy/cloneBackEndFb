@@ -13,7 +13,7 @@ module.exports.getMessages = async (req, res, next) => {
       }).sort({ updatedAt: 1 });
 
 
-      const projectedMessages = messages.map((msg) => {
+      const projectedMessages = messages?.map((msg) => {
         return {
           fromSelf: msg.sender.toString() === from,
           message: msg.message.text,
@@ -30,7 +30,7 @@ module.exports.getMessages = async (req, res, next) => {
         },
       }).sort({ updatedAt: 1 });
 
-      const projectedMessages = messages.map((msg) => {
+      const projectedMessages = messages?.map((msg) => {
         return {
           fromSelf: msg.sender.toString() === from,
           message: msg.message.text,
@@ -61,7 +61,6 @@ module.exports.addGroup = async (req, res, next) => {
       sender: req.body.users,
     });
 
-    console.log({ data });
 
     if (data) return res.json({ msg: "Message added successfully." });
     else return res.json({ msg: "Failed to add message to the database" });
@@ -75,7 +74,6 @@ module.exports.addMessage = async (req, res, next) => {
   try {
     const { from, to, message, array_Id, name } = req.body;
 
-    console.log({ name })
 
     if (Array.isArray(to)) {
       const userId = to.concat(from)

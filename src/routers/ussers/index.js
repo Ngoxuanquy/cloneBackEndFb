@@ -9,8 +9,8 @@ const router = express.Router()
 //check _id của users
 router.use(authenticationV2)
 
+router.post('/getFullUser', asyncHandler(UserController.getFullUser))
 router.post('/getUserName/:keySearch', asyncHandler(UserController.getUserName))
-router.post('/getFullUser/', asyncHandler(UserController.getFullUser))
 router.post('/getNameById/:keyId', asyncHandler(UserController.getNameById))
 router.post('/addFriend', asyncHandler(UserController.addFriend))
 router.post('/deleteFriend', asyncHandler(UserController.deleteFriend))

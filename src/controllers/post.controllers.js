@@ -5,7 +5,6 @@ const { CREATED, SuccessResponse, } = require('../core/success.response')
 class AccessController {
 
     createPost = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await PostService.createPost(req.body),
@@ -13,15 +12,12 @@ class AccessController {
     }
 
     getPost = async (req, res, next) => {
-        console.log(req.query)
         new SuccessResponse({
             metadata: await PostService.findAllProducts(req.query),
         }).send(res)
     }
 
     postHaha = async (req, res, next) => {
-
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await PostService.postHaha(req.body),
@@ -29,7 +25,6 @@ class AccessController {
     }
 
     deleteComment = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await PostService.deleteComment(req.body),
@@ -37,7 +32,6 @@ class AccessController {
     }
 
     getAllById = async (req, res, next) => {
-        console.log(req.query)
         new SuccessResponse({
             metadata: await PostService.getAllById(req.query),
         }).send(res)
@@ -50,7 +44,6 @@ class AccessController {
     }
 
     createComment = async (req, res, next) => {
-        console.log(req.body)
         new CREATED({
             message: 'Register OK',
             metadata: await PostService.createComment(req.body),

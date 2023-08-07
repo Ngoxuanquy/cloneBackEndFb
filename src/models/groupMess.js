@@ -14,9 +14,9 @@ var GroupMessSchema = new Schema(
             type: Boolean,
             default: false,
         },
-        name_group: {
+        name: {
             type: String,
-            default: "quyquy",
+            // default: "quyquy",
         },
 
         array_Id: {
