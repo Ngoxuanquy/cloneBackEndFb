@@ -8,7 +8,7 @@ mongoose.set('strictQuery', true)
 
 //nd6K6idrswJYN4cd
 // const connectString = `mongodb://${host}:${port}/${name}`
-const connectString = 'mongodb+srv://quyquy:QyHalVDd06UVkrt1@cluster0.xv8sxci.mongodb.net'
+const connectString = 'mongodb+srv://quyquy:ZrCN7PyOUlOFTV7o@cluster0.waezzqe.mongodb.net/'
 
 
 console.log('connectString::', connectString)
