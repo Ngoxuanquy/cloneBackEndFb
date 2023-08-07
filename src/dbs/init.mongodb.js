@@ -30,7 +30,7 @@ class Database {
             .then((_) => {
                 console.log('Connected success', countConnect())
             })
-            .catch((err) => console.log(`Error Connect`))
+            .catch((err) => console.log(`Error Connect` + err))
     }
 
     static getInstance() {
