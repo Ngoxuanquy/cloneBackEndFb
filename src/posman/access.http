@@ -1,8 +1,8 @@
 @url_dev = http://localhost:3056/v1/api
 
-POST {{url_dev}}/shop/signup
+POST https://backendclonefb.onrender.com/v1/api/shop/signup
 Content-Type: application/json 
-x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5eed575ec5ca07b83b92c80b834de0b1db41017c161548fd91f3f4c2e3dab
+x-api-key: 495ceddcdbfba2ee74bb119d269a9c62df9ffb92092b3ed21ce97a64674d4ae93d44a0bcc646046fd0cd46df91c051e79ae7fa969a64ef8f4559dd59bd4d35c8
 
 {
     "name": "abc",
@@ -12,7 +12,7 @@ x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5e
 ###
 POST {{url_dev}}/shop/login
 Content-Type: application/json 
-x-api-key: 26536df4388e073d665ec85c9a86210f0012a9c46312e4e947efabb5cb16581b7dd5eed575ec5ca07b83b92c80b834de0b1db41017c161548fd91f3f4c2e3dab
+x-api-key: 495ceddcdbfba2ee74bb119d269a9c62df9ffb92092b3ed21ce97a64674d4ae93d44a0bcc646046fd0cd46df91c051e79ae7fa969a64ef8f4559dd59bd4d35c8
 
 {
     "email": "121",
